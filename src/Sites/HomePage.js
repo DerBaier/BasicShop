@@ -22,6 +22,7 @@ export default class HomePage extends Component {
                     <Product producer="Nintendo" image="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81845802/fee_786_587_png" 
                     title="Pokemon Schwert"></Product>
                  </div>
+                 <p>Das ist ein Test</p>
             </div>
         )
     }
