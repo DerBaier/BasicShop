@@ -1,3 +1,32 @@
+.productShoppingButton {
+  background-color: rgb(190, 189, 189);
+ 
+}
+
+.ShoppingCartContainer {
+  background-color: green !important;
+  display: block;
+  height: 150px;
+  width: 50px;
+ border: 5px solid blue;
+}
+.productShoppingButton div {
+  background: url("https://image.flaticon.com/icons/png/512/3144/3144456.png")
+    no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  
+  width: 30px !important;
+  height: 30px;
+}
+
+.shoppingcartButton{
+  width: 50px !important;
+  display: block;
+  
+  margin: 0 auto;
+}
+
 /*#region Product Gallery*/
 .ProductGallery {
   display: flex;
@@ -156,6 +185,9 @@ nav {
   bottom: 0;
 }
 
+
+
+
 /*#endregion */
 
 /*#region HomePage*/
@@ -224,19 +256,7 @@ h1 {
     z-index: 100;
   }
 
-  .productShoppingButton {
-    background-color: rgb(190, 189, 189);
-    display: inline;
-  }
 
-  .productShoppingButton div {
-    background: url("https://image.flaticon.com/icons/png/512/3144/3144456.png")
-      no-repeat;
-    background-size: cover;
-    margin: 0 auto;
-    width: 30px;
-    height: 30px;
-  }
 
   .productShoppingButton:hover {
   }
@@ -289,6 +309,5 @@ h1 {
     border-bottom: 1px solid gray;
   }
 
-  .ShoppingCartContainer {
-  }
+  
 }
