@@ -7,10 +7,9 @@ export function AddToList(product) {
 
 export function LoadList() {
     var loadedlist =  JSON.parse(localStorage.getItem("Products"));
-    
+
     var products =loadedlist ? loadedlist : [];
-    console.log()
-    console.log(products);
+
     return products;
 }
 

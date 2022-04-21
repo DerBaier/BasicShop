@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Waschmaschine from '../Images/Waschmaschine1.jpg'
-import ShoppingCartButton from './ShoppingCartButton';
+import ShoppingCartButtons from './ShoppingCartButtons';
 
 export default class Product extends Component {
 
@@ -10,6 +10,9 @@ export default class Product extends Component {
          * @param price {int} Preis für das Produkt
          */
         this.state = {
+            onClick: props.onClick,
+            productList: props.productList,
+            deleteButton: props.deleteButton,
             /**Das ist der Preis */
             product: {
             price: props.price,
@@ -33,7 +36,11 @@ export default class Product extends Component {
                 <h6 className="productProducer">{this.state.product.producer}</h6>
                 <h3 className="productTitle">{this.state.product.title}</h3>
                 <p className="productPrice">{this.state.product.price},00 €</p>
-                <ShoppingCartButton product={this.state.product}/>
+                { this.state.deleteButton ? 
+                <ShoppingCartButtons onClick={this.state.onClick}   deleteButton product={this.state.product}/>
+                :
+                <ShoppingCartButtons onClick={this.state.onClick}  product={this.state.product}/>
+                }
             </div>
         )
     }

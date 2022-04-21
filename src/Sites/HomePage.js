@@ -40,7 +40,7 @@ export default class HomePage extends Component {
                  { /* <ProductGallery/> */}
 
                  <div className="productHighlights">            
-                    {this.state.products.map((value) => <Product price={value.price} producer={value.producer} title={value.title} image={value.image}></Product>)}
+                    {this.state.products.map((value) => <Product onpage price={value.price} producer={value.producer} title={value.title} image={value.image}></Product>)}
                  </div>
                  <p> Some Test</p>
             </div>

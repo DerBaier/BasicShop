@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import Product from './Product';
 import { LoadList, AddToList } from '../shoppingcartlist';
 
@@ -14,18 +14,25 @@ export default class ShoppingCart extends Component {
             
 
             this.loadProducts = () =>{
-                var productlist = LoadList;
-                
-                this.setState({products: productlist});
-                console.log(this.state.products);
-           
+                var productlist = LoadList();               
+                this.setState({products: productlist});                        
             }
+
+        
 
             this.showProducts = () =>{
                 this.loadProducts();
-                this.setState({cartVisible: !this.state.cartVisible});
+                this.setState({ cartVisible: !this.state.cartVisible});
+         
+            }
+
+            this.clicked = () =>{
+                console.log("You Clicked me");
             }
          
+        }
+        componentDidUpdate(){
+            console.log("Hello");
         }
 
         componentDidMount(){
@@ -43,7 +50,7 @@ export default class ShoppingCart extends Component {
                     this.state.cartVisible ?  
                     <div className="shoppingCartContainer">
                         { this.state.products.map((value) => {
-                                <Product image={value.image}></Product>
+                               return <Product onClick={this.clicked} productList={this.state.products} deleteButton="true" image={value.image}></Product>
                         })                     
                         }
                     </div>
