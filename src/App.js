@@ -55,17 +55,7 @@ function App() {
         </Switch>
       </div>
       <footer>
-        <div 
-        className=" footerDiv">
-          <ul className="footerLinks">
-            <li><a href="/contact">Kontakt</a></li>
-            <li><a href="/aboutus">Über uns</a></li>
-            <li><a href="/help">Hilfe und FAQ</a></li>
-            <li><a href="/job">Jobs / Karriere</a></li>
-            <p>&copy; by Juri Baier</p>
-          </ul>
-          
-        </div>
+        
         
       </footer>
     </Router>

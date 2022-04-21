@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Product from '../Components/Product'
+
 export default class ProductPage extends Component {
     constructor(props){
         super(props);
@@ -39,9 +39,7 @@ export default class ProductPage extends Component {
             <div >
                 <h1>Dies ist die Produkt Seite</h1>
                 <div className="productsDiv">
-                  {this.state.products.map((product) =>{
-                      return <Product price={product.price} producer={product.producer} title={product.title} image={product.image} />
-                  })}
+                  
                 </div>
             </div>
         )

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import ProductGallery from '../Components/ProductGallery';
-import Product
- from '../Components/Product';
+
 export default class HomePage extends Component {
     constructor(props){
         super(props);
@@ -37,12 +35,8 @@ export default class HomePage extends Component {
         return (
             <div>
                 <h1>Das ist die Startseite</h1>
-                 { /* <ProductGallery/> */}
 
-                 <div className="productHighlights">            
-                    {this.state.products.map((value) => <Product onpage price={value.price} producer={value.producer} title={value.title} image={value.image}></Product>)}
-                 </div>
-                 <p> Some Test</p>
+                 
             </div>
          
         )
